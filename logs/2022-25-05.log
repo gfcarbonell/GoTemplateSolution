@@ -1,0 +1,62 @@
+INFO: 2022/05/25 12:06:52 CreateTemplateController.go:41: Request:  {string}
+INFO: 2022/05/25 12:06:52 CreateTemplateController.go:53: 10056
+INFO: 2022/05/25 12:06:57 CreateTemplateController.go:41: Request:  {string}
+INFO: 2022/05/25 12:06:57 CreateTemplateController.go:53: 10057
+INFO: 2022/05/25 12:06:58 CreateTemplateController.go:41: Request:  {string}
+INFO: 2022/05/25 12:06:58 CreateTemplateController.go:53: 10058
+INFO: 2022/05/25 12:06:58 CreateTemplateController.go:41: Request:  {string}
+INFO: 2022/05/25 12:06:58 CreateTemplateController.go:53: 10059
+INFO: 2022/05/25 12:06:59 CreateTemplateController.go:41: Request:  {string}
+INFO: 2022/05/25 12:06:59 CreateTemplateController.go:53: 10060
+INFO: 2022/05/25 12:06:59 CreateTemplateController.go:41: Request:  {string}
+INFO: 2022/05/25 12:06:59 CreateTemplateController.go:53: 10061
+INFO: 2022/05/25 12:07:00 CreateTemplateController.go:41: Request:  {string}
+INFO: 2022/05/25 12:07:00 CreateTemplateController.go:53: 10062
+INFO: 2022/05/25 12:07:00 CreateTemplateController.go:41: Request:  {string}
+INFO: 2022/05/25 12:07:00 CreateTemplateController.go:53: 10063
+INFO: 2022/05/25 12:07:00 CreateTemplateController.go:41: Request:  {string}
+INFO: 2022/05/25 12:07:00 CreateTemplateController.go:53: 10064
+INFO: 2022/05/25 12:07:00 CreateTemplateController.go:41: Request:  {string}
+INFO: 2022/05/25 12:07:00 CreateTemplateController.go:53: 10065
+INFO: 2022/05/25 12:07:01 CreateTemplateController.go:41: Request:  {string}
+INFO: 2022/05/25 12:07:01 CreateTemplateController.go:53: 10066
+INFO: 2022/05/25 12:07:01 CreateTemplateController.go:41: Request:  {string}
+INFO: 2022/05/25 12:07:01 CreateTemplateController.go:53: 10067
+INFO: 2022/05/25 12:07:01 CreateTemplateController.go:41: Request:  {string}
+INFO: 2022/05/25 12:07:01 CreateTemplateController.go:53: 10068
+INFO: 2022/05/25 12:07:01 CreateTemplateController.go:41: Request:  {string}
+INFO: 2022/05/25 12:07:01 CreateTemplateController.go:53: 10069
+INFO: 2022/05/25 12:07:01 CreateTemplateController.go:41: Request:  {string}
+INFO: 2022/05/25 12:07:01 CreateTemplateController.go:53: 10070
+INFO: 2022/05/25 12:07:01 CreateTemplateController.go:41: Request:  {string}
+INFO: 2022/05/25 12:07:01 CreateTemplateController.go:53: 10071
+INFO: 2022/05/25 12:07:02 CreateTemplateController.go:41: Request:  {string}
+INFO: 2022/05/25 12:07:02 CreateTemplateController.go:53: 10072
+INFO: 2022/05/25 12:07:02 CreateTemplateController.go:41: Request:  {string}
+INFO: 2022/05/25 12:07:02 CreateTemplateController.go:53: 10073
+INFO: 2022/05/25 12:07:02 CreateTemplateController.go:41: Request:  {string}
+INFO: 2022/05/25 12:07:02 CreateTemplateController.go:53: 10074
+INFO: 2022/05/25 12:07:02 CreateTemplateController.go:41: Request:  {string}
+INFO: 2022/05/25 12:07:02 CreateTemplateController.go:53: 10075
+INFO: 2022/05/25 12:07:02 CreateTemplateController.go:41: Request:  {string}
+INFO: 2022/05/25 12:07:02 CreateTemplateController.go:53: 10076
+INFO: 2022/05/25 12:07:02 CreateTemplateController.go:41: Request:  {string}
+INFO: 2022/05/25 12:07:02 CreateTemplateController.go:53: 10077
+INFO: 2022/05/25 12:12:55 GetTemplateByIdController.go:42: Request:  1
+INFO: 2022/05/25 12:12:55 GetTemplateByIdController.go:54: {1 Gian fsdadasdas}
+INFO: 2022/05/25 12:13:00 GetTemplateByIdController.go:42: Request:  1
+INFO: 2022/05/25 12:13:00 GetTemplateByIdController.go:54: {1 Gian fsdadasdas}
+INFO: 2022/05/25 12:13:01 GetTemplateByIdController.go:42: Request:  1
+INFO: 2022/05/25 12:13:01 GetTemplateByIdController.go:54: {1 Gian fsdadasdas}
+INFO: 2022/05/25 12:13:01 GetTemplateByIdController.go:42: Request:  1
+INFO: 2022/05/25 12:13:01 GetTemplateByIdController.go:54: {1 Gian fsdadasdas}
+INFO: 2022/05/25 12:13:01 GetTemplateByIdController.go:42: Request:  1
+INFO: 2022/05/25 12:13:01 GetTemplateByIdController.go:54: {1 Gian fsdadasdas}
+INFO: 2022/05/25 12:13:01 GetTemplateByIdController.go:42: Request:  1
+INFO: 2022/05/25 12:13:01 GetTemplateByIdController.go:54: {1 Gian fsdadasdas}
+INFO: 2022/05/25 12:13:01 GetTemplateByIdController.go:42: Request:  1
+INFO: 2022/05/25 12:13:01 GetTemplateByIdController.go:54: {1 Gian fsdadasdas}
+INFO: 2022/05/25 12:13:03 GetTemplateByIdController.go:42: Request:  2
+INFO: 2022/05/25 12:13:03 GetTemplateByIdController.go:54: {2 Roberto fsdadasdas}
+INFO: 2022/05/25 12:13:05 GetTemplateByIdController.go:42: Request:  3
+INFO: 2022/05/25 12:13:05 GetTemplateByIdController.go:54: {3 Primo fsdadasdas}

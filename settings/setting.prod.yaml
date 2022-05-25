@@ -1,0 +1,13 @@
+SecretKey: P/$+dc(vi%r),%}rIO029f,|bv\:UCmDN.t`(W|8H8Utb|[>+t.Ok*P3J\:rT?KBT
+Server:
+  Port: 9500
+HttpClient:
+  Timeout: 3000
+Database:
+  Host: localhost
+  Port: 1433
+  Username: sa
+  Password:  S1st3mas
+  DatabaseName: test
+URL:
+  Templates: "http://localhost:7500/v1/api/templates-proxys"

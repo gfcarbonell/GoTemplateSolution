@@ -1,0 +1,18 @@
+INFO: 2022/05/23 23:57:56 CreateTemplateController.go:33: Request:  {Primo}
+INFO: 2022/05/23 23:57:56 CreateTemplateController.go:45: [52 54] <nil>
+INFO: 2022/05/23 23:57:57 CreateTemplateController.go:33: Request:  {Primo}
+INFO: 2022/05/23 23:57:57 CreateTemplateController.go:45: [52 55] <nil>
+INFO: 2022/05/23 23:58:56 GetTemplateByIdController.go:34: Request:  1
+INFO: 2022/05/23 23:58:56 GetTemplateByIdController.go:46: [123 34 105 100 34 58 49 44 34 110 97 109 101 34 58 34 71 105 97 110 34 44 34 100 101 115 99 114 105 112 116 105 111 110 34 58 34 68 101 115 99 114 105 112 116 105 111 110 32 84 101 109 112 108 97 116 101 34 125] <nil>
+INFO: 2022/05/23 23:58:57 GetTemplateByIdController.go:34: Request:  1
+INFO: 2022/05/23 23:58:57 GetTemplateByIdController.go:46: [123 34 105 100 34 58 49 44 34 110 97 109 101 34 58 34 71 105 97 110 34 44 34 100 101 115 99 114 105 112 116 105 111 110 34 58 34 68 101 115 99 114 105 112 116 105 111 110 32 84 101 109 112 108 97 116 101 34 125] <nil>
+INFO: 2022/05/23 23:58:57 GetTemplateByIdController.go:34: Request:  1
+INFO: 2022/05/23 23:58:57 GetTemplateByIdController.go:46: [123 34 105 100 34 58 49 44 34 110 97 109 101 34 58 34 71 105 97 110 34 44 34 100 101 115 99 114 105 112 116 105 111 110 34 58 34 68 101 115 99 114 105 112 116 105 111 110 32 84 101 109 112 108 97 116 101 34 125] <nil>
+INFO: 2022/05/23 23:59:11 CreateTemplateController.go:33: Request:  {Primo}
+INFO: 2022/05/23 23:59:11 CreateTemplateController.go:45: [52 56] <nil>
+INFO: 2022/05/23 23:59:12 CreateTemplateController.go:33: Request:  {Primo}
+INFO: 2022/05/23 23:59:12 CreateTemplateController.go:45: [52 57] <nil>
+INFO: 2022/05/23 23:59:12 CreateTemplateController.go:33: Request:  {Primo}
+INFO: 2022/05/23 23:59:12 CreateTemplateController.go:45: [53 48] <nil>
+INFO: 2022/05/23 23:59:13 CreateTemplateController.go:33: Request:  {Primo}
+INFO: 2022/05/23 23:59:13 CreateTemplateController.go:45: [53 49] <nil>
