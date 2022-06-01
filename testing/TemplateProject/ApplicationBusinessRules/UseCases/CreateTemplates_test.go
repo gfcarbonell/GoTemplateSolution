@@ -19,42 +19,42 @@ func TestMain(m *testing.M) {
 
 func TestCreateTemplateUseCase(t *testing.T) {
 	testCases := []struct {
-		Name                  string
-		RequestData           DTOs.CreateTemplateDTO
-		ResponseData          int64
-		ExpectValueRepository *int64
-		ExpectContent         int64
-		ExpectedError         error
+		Name                    string
+		RequestData             DTOs.CreateTemplateDTO
+		ResponseData            int64
+		ExpectedValueRepository *int64
+		ExpectedContent         int64
+		ExpectedError           error
 	}{
 		{
 			Name: "CreateTemplateSucess",
 			RequestData: DTOs.CreateTemplateDTO{
 				Name: "Gian",
 			},
-			ResponseData:          int64(1),
-			ExpectValueRepository: func() *int64 { i := int64(1); return &i }(),
-			ExpectContent:         int64(1),
-			ExpectedError:         nil,
+			ResponseData:            int64(1),
+			ExpectedValueRepository: func() *int64 { i := int64(1); return &i }(),
+			ExpectedContent:         int64(1),
+			ExpectedError:           nil,
 		},
 		{
 			Name: "CreateTemplateGenerateInvalidId",
 			RequestData: DTOs.CreateTemplateDTO{
 				Name: "Gian",
 			},
-			ResponseData:          int64(-1),
-			ExpectValueRepository: func() *int64 { i := int64(-1); return &i }(),
-			ExpectContent:         int64(1),
-			ExpectedError:         Constants.ErrGenerateInvalidId,
+			ResponseData:            int64(-1),
+			ExpectedValueRepository: func() *int64 { i := int64(-1); return &i }(),
+			ExpectedContent:         int64(1),
+			ExpectedError:           Constants.ErrGenerateInvalidId,
 		},
 		{
 			Name: "CreateTemplateGenerateBadRequest",
 			RequestData: DTOs.CreateTemplateDTO{
 				Name: "",
 			},
-			ResponseData:          int64(-1),
-			ExpectValueRepository: func() *int64 { i := int64(-1); return &i }(),
-			ExpectContent:         int64(1),
-			ExpectedError:         Constants.ErrValidation,
+			ResponseData:            int64(-1),
+			ExpectedValueRepository: func() *int64 { i := int64(-1); return &i }(),
+			ExpectedContent:         int64(1),
+			ExpectedError:           Constants.ErrValidation,
 		},
 	}
 
@@ -67,18 +67,19 @@ func TestCreateTemplateUseCase(t *testing.T) {
 			// Mock Presenters
 			outputPort := mockPresenters.ICreateTemplatePresenter{}
 			outputPort.On("Handle", tc.ResponseData, tc.ExpectedError)
-			outputPort.On("GetContent").Return(tc.ExpectContent)
+			outputPort.On("GetContent").Return(tc.ExpectedContent)
 			outputPort.On("GetError").Return(tc.ExpectedError)
 
-			// Instance Input Port
+			// Input Port
 			var inputPort = &CreateTemplateUseCase.CreateTemplateInputPort{
 				RequestData: tc.RequestData, OutputPort: &outputPort,
 			}
 
+			// Mock Repository
 			createTemplateRepository := &mockRepositories.ICreateTemplateRepository{}
-			createTemplateRepository.On("Handle", Entities.TemplateEntity{Name: "Gian"}).Return(tc.ExpectValueRepository, tc.ExpectedError)
+			createTemplateRepository.On("Handle", Entities.TemplateEntity{Name: "Gian"}).Return(tc.ExpectedValueRepository, tc.ExpectedError)
 
-			// Mock Use Case
+			// Use Case
 			createTemplateUseCase := CreateTemplateUseCase.NewCreateTemplateInteractor(createTemplateRepository)
 			createTemplateUseCase.Handle(inputPort)
 
@@ -89,7 +90,7 @@ func TestCreateTemplateUseCase(t *testing.T) {
 				assert.NotNil(t, inputPort.GetOutputPort().GetError(), "Error should not be nil")
 				assert.NotEqual(t, tc.ResponseData, outputPort.GetContent(), "expected 1, got -1")
 			} else {
-				assert.NotSame(t, tc.RequestData, "Vlaidation")
+				assert.NotSame(t, tc.RequestData, "Error Validation")
 			}
 		})
 	}
