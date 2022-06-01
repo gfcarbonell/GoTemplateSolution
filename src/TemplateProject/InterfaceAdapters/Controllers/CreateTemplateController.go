@@ -1,7 +1,7 @@
 package Controllers
 
 import (
-	"TemplateSolution/src/Shared/Models"
+	"TemplateSolution/src/Shared/Constants"
 	"TemplateSolution/src/Shared/Utils"
 	"TemplateSolution/src/TemplateProject/ApplicationBusinessRules/DTOs"
 	"TemplateSolution/src/TemplateProject/ApplicationBusinessRules/UseCases/CreateTemplateUseCase"
@@ -35,7 +35,7 @@ func (iam *CreateTemplateController) Handle(ctx echo.Context) error {
 	var outputPort = Presenters.NewCreateTemplatePresenter()
 
 	if err := ctx.Bind(&requestData); !errors.Is(err, nil) {
-		return Utils.JSONHandleError(http.StatusBadRequest, Models.ErrorModel{Code: -1, Message: "Bad request."}, ctx)
+		return Utils.JSONHandleError(http.StatusBadRequest, Constants.ErrBadRequest, ctx)
 	}
 
 	Utils.InfoLogger.Println("Request: ", requestData)
@@ -47,7 +47,7 @@ func (iam *CreateTemplateController) Handle(ctx echo.Context) error {
 	iam.CreateTemplateInteractor.Handle(&input)
 
 	if !errors.Is(outputPort.GetError(), nil) {
-		return Utils.JSONHandleError(http.StatusInternalServerError, Models.ErrorModel{Code: -1, Message: outputPort.GetError().Error()}, ctx)
+		return Utils.JSONHandleError(http.StatusInternalServerError, Constants.ErrInternalServer, ctx)
 	}
 
 	Utils.InfoLogger.Println(outputPort.GetContent())

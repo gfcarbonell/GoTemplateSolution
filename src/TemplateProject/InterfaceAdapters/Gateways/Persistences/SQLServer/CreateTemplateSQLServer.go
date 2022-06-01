@@ -1,6 +1,7 @@
 package SQLServer
 
 import (
+	"TemplateSolution/src/Shared/Constants"
 	"TemplateSolution/src/TemplateProject/EnterpriseBusinessRules/Entities"
 	"TemplateSolution/src/TemplateProject/EnterpriseBusinessRules/Repositories"
 	"database/sql"
@@ -17,7 +18,7 @@ func NewCreateTemplateSQLServer(db *sql.DB) Repositories.ICreateTemplateReposito
 	return &CreateTemplateSQLServer{db: db}
 }
 
-func (iam *CreateTemplateSQLServer) Handle(entity *Entities.TemplateEntity) (*int64, error) {
+func (iam *CreateTemplateSQLServer) Handle(entity Entities.TemplateEntity) (*int64, error) {
 	var id sql.NullInt64
 	result := iam.db.QueryRow(`exec create_template @name=?`, entity.Name)
 
@@ -26,7 +27,7 @@ func (iam *CreateTemplateSQLServer) Handle(entity *Entities.TemplateEntity) (*in
 	}
 
 	if !id.Valid || id.Int64 <= 0 {
-		return nil, errors.New("invalid ID")
+		return nil, Constants.ErrGenerateInvalidId
 	}
 
 	fmt.Printf("Database Response as struct %+v\n", result)

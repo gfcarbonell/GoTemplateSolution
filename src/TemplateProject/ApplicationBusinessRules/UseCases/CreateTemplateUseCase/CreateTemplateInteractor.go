@@ -1,6 +1,7 @@
 package CreateTemplateUseCase
 
 import (
+	"TemplateSolution/src/Shared/Constants"
 	"TemplateSolution/src/TemplateProject/ApplicationBusinessRules/Mappers"
 	"TemplateSolution/src/TemplateProject/EnterpriseBusinessRules/Repositories"
 	"gopkg.in/go-playground/validator.v9"
@@ -20,12 +21,18 @@ func (iam *CreateTemplateInteractor) Handle(request *CreateTemplateInputPort) {
 	err := valid.Struct(request.GetRequestData())
 
 	if err != nil {
-		request.GetOutputPort().Handle(-1, err.(validator.ValidationErrors))
+		//request.GetOutputPort().Handle(-1, err.(validator.ValidationErrors))
+		request.GetOutputPort().Handle(-1, Constants.ErrValidation)
 		return
 	}
 
 	var entity = Mappers.CreateTemplateDtoToTemplateEntity(request.GetRequestData())
-	id, err := iam.CreateTemplateRepository.Handle(&entity)
+	id, err := iam.CreateTemplateRepository.Handle(entity)
 
-	request.GetOutputPort().Handle(*id, err)
+	if err != nil {
+		request.GetOutputPort().Handle(-1, err)
+		return
+	}
+
+	request.GetOutputPort().Handle(*id, nil)
 }

@@ -14,10 +14,6 @@ import (
 	"database/sql"
 )
 
-type ITemplateContainer interface {
-	NewTemplateController() Controllers.TemplateController
-}
-
 type TemplateContainer struct {
 	Db *sql.DB
 }
